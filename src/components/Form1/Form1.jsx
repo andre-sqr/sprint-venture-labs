@@ -3,8 +3,13 @@ import Input from '../Input/Input'
 import Label from '../Label/Label'
 import Button from '../Button/Button'
 import style from './Form1.module.css'
+import { useContext } from 'react'
+import { CustomerContext } from '../../context/CustomersProvider'
 
 const Form1 = () => {
+
+  const {nextPage} = useContext(CustomerContext)
+
   return (
     <div>
         <form className={style.form}>
@@ -16,8 +21,8 @@ const Form1 = () => {
             <Input type="email" style={style.input}/>
             <Label style={style.label} text="Telefone"/>
             <Input type="number" style={style.input}/>
-            <Button text="Próximo" style={style.btn}/>
         </form>
+            <Button text="Próximo" style={style.btn} onClick={nextPage}/>
     </div>
   )
 }
