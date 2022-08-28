@@ -8,18 +8,26 @@ import { CustomerContext } from '../../context/CustomersProvider'
 
 const Form3 = () => {
 
-  const {backPage} = useContext(CustomerContext)
+  const {backPage, handleChange, dadosForm, handleSubmit} = useContext(CustomerContext)
 
   return (
     <div>
         <form>
         <Label text="Data de nascimento" style={style.label}/>
-        <Input type="date" style={style.input}/>
+        <Input type="date" 
+        style={style.input}
+        value={dadosForm.nascimento}
+        handleChange={(e)=>handleChange(e, 'nascimento')}/>
+
         <Label text="CPF" style={style.label}/>
-        <Input type="number" style={style.input}/>
+
+        <Input type="number" 
+        style={style.input}
+        value={dadosForm.cpf}
+        handleChange={(e)=>handleChange(e, 'cpf')}/>
         </form>
         <Button text="Voltar" style={style.btn} onClick={backPage}/>
-        <Button text="Salvar" style={style.btn}/>
+        <Button text="Salvar" style={style.btn} onClick={handleSubmit}/>
     </div>
   )
 }

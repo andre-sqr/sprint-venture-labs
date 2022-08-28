@@ -8,17 +8,28 @@ import { CustomerContext } from '../../context/CustomersProvider'
 
 const Form2 = () => {
 
-  const {nextPage, backPage} = useContext(CustomerContext)
+  const {nextPage, backPage, handleChange, dadosForm} = useContext(CustomerContext)
 
   return (
     <div>
         <form>
-        <Label text="CEP" style={style.label}/>
-        <Input type="number" style={style.input}/>
+        <Label text="CEP" style={style.input}/>
+        <Input type="number" 
+        style={style.label}
+        value={dadosForm.cep}
+        handleChange={(e)=>handleChange(e, 'cep')}/>
+
         <Label text="Endereço 1" style={style.label}/>
-        <Input type="text" style={style.input}/>
+        <Input type="text" 
+        style={style.input}
+        value={dadosForm.enderecoUm}
+        handleChange={(e)=>handleChange(e, 'enderecoUm')}/>
+
         <Label text="Endereço 2" style={style.label}/>
-        <Input type="text" style={style.input}/>
+        <Input type="text" 
+        style={style.input}
+        value={dadosForm.enderecoDois}
+        handleChange={(e)=>handleChange(e, 'enderecoDois')}/>
         </form>
         <Button text="Voltar" style={style.btn} onClick={backPage}/>
         <Button text="Próximo" style={style.btn} onClick={nextPage}/>
