@@ -8,7 +8,7 @@ import { CustomerContext } from '../../context/CustomersProvider'
 
 const Form2 = () => {
 
-  const {nextPage} = useContext(CustomerContext)
+  const {nextPage, backPage} = useContext(CustomerContext)
 
   return (
     <div>
@@ -20,6 +20,7 @@ const Form2 = () => {
         <Label text="Endereço 2" style={style.label}/>
         <Input type="text" style={style.input}/>
         </form>
+        <Button text="Voltar" style={style.btn} onClick={backPage}/>
         <Button text="Próximo" style={style.btn} onClick={nextPage}/>
     </div>
   )
