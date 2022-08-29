@@ -59,7 +59,8 @@ const CustomersProvider = ({children}) => {
     nextPage: nextPage,
     backPage: backPage,
     handleChange: handleChange,
-    handleSubmit: handleSubmit
+    handleSubmit: handleSubmit,
+    clientes: clientes
   }
 
   return (
