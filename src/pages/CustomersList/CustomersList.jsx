@@ -3,6 +3,7 @@ import style from './CustomersList.module.css'
 import CustomerCard from '../../components/CustomerCard/CustomerCard'
 import { CustomerContext } from '../../context/CustomersProvider'
 
+
 const CustomersList = () => {
 
   const {clientes} = useContext(CustomerContext)
