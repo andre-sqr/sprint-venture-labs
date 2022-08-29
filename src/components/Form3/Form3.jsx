@@ -25,6 +25,12 @@ const Form3 = () => {
         style={style.input}
         value={dadosForm.cpf}
         handleChange={(e)=>handleChange(e, 'cpf')}/>
+
+        <Label text="Renda mensal" style={style.label}/>
+        <Input type="number"
+        style={style.input}
+        value={dadosForm.renda}
+        handleChange={(e)=>handleChange(e, 'renda')}/>
         </form>
         <Button text="Voltar" style={style.btn} onClick={backPage}/>
         <Button text="Salvar" style={style.btn} onClick={handleSubmit}/>

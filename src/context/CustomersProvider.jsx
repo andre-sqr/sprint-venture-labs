@@ -13,7 +13,8 @@ const CustomersProvider = ({children}) => {
     enderecoUm: '',
     enderecoDois: '',
     nascimento: '',
-    cpf: ''
+    cpf: '',
+    renda: ''
   })
 
   const [page, setPage] = useState(0)
@@ -46,7 +47,8 @@ const CustomersProvider = ({children}) => {
       enderecoUm: '',
       enderecoDois: '',
       nascimento: '',
-      cpf: ''
+      cpf: '',
+      renda: ''
     })
     setPage(0)
   }
