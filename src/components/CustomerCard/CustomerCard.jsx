@@ -1,15 +1,16 @@
 import React from 'react'
 
-const CustomerCard = () => {
+const CustomerCard = ({nome, sobrenome, email, telefone, endereco1, endereco2, nascimento, cpf, renda}) => {
   return (
     <div>
-        <h1>Nome + Sobrenome</h1>
-        <p>Email:</p>
-        <p>Telefone:</p>
-        <p>Endereço 1:</p>
-        <p>Endereço 2:</p>
-        <p>Data de nascimento:</p>
-        <p>CPF:</p>
+        <h1>{nome} {sobrenome}</h1>
+        <p><b>Email: </b>{email}</p>
+        <p><b>Telefone: </b>{telefone}</p>
+        <p><b>Endereço 1: </b>{endereco1}</p>
+        <p><b>Endereço 2: </b>{endereco2}</p>
+        <p><b>Data de nascimento: </b>{nascimento}</p>
+        <p><b>CPF: </b>{cpf}</p>
+        <p><b>Renda mensal: </b>{renda}</p>
     </div>
   )
 }
